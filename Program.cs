@@ -1,6 +1,7 @@
 global using Microsoft.EntityFrameworkCore;
 global using api.Entities;
 global using api.Data;
+using api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
 
