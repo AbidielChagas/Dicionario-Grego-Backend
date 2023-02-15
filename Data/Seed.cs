@@ -9,7 +9,7 @@ namespace api.Data
        {
             if (await context.Words.AnyAsync()) return;
 
-            var wordData = await File.ReadAllTextAsync("Data/Data.json");
+            var wordData = await File.ReadAllTextAsync(@"C:\Dicionario-Grego-Backend\Data\Data.json");
 
             var options = new JsonSerializerOptions{PropertyNameCaseInsensitive = true};
 
