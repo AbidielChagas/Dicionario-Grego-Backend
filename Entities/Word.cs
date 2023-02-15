@@ -7,9 +7,9 @@ namespace api.Entities
 {
     public class Word
     {
-        public int id { get; set; }
-        public string Searchable { get; set; }
-        public string Name { get; set; }        
+        public int Id { get; set; }
+        public string Searchable { get; set; } = "";
+        public string Name { get; set; } = "";      
         public string? Etimology { get; set; }
         public string? Type { get; set; }
         public string? Gender { get; set; } 
